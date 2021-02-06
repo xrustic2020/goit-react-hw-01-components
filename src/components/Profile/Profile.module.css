@@ -25,9 +25,13 @@
   font-weight: bold;
 }
 
-.tag,
-.location {
+.tag {
   color: #838383;
+}
+
+.location {
+  composes: tag;
+  margin-bottom: 50px;
 }
 
 .label {
@@ -37,10 +41,13 @@
 
 .stats {
   list-style: none;
+  border-bottom-right-radius: inherit;
+  border-bottom-left-radius: inherit;
   display: flex;
   justify-content: space-between;
   padding: 0;
   margin: 0;
+  border-top: 1px solid lightgrey;
   background-color: #ececec;
 }
 
@@ -51,5 +58,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid lightgrey;
+  border-right: 1px solid lightgrey;
+}
+
+.stats li:first-child {
+  border-bottom-left-radius: inherit;
+}
+
+.stats li:last-child {
+  border-bottom-right-radius: inherit;
+  border-right: none;
 }

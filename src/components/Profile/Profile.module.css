@@ -1,15 +1,16 @@
 .profile {
-  margin: 100px auto;
-  width: 500px;
+  display: flex;
+  flex-direction: column;
   background-color: #fff;
   border-radius: 5px;
+  margin-bottom: 70px;
 }
 
 .description {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 .avatar {
@@ -25,13 +26,9 @@
   font-weight: bold;
 }
 
-.tag {
-  color: #838383;
-}
-
+.tag,
 .location {
-  composes: tag;
-  margin-bottom: 50px;
+  color: #838383;
 }
 
 .label {
@@ -41,14 +38,14 @@
 
 .stats {
   list-style: none;
-  border-bottom-right-radius: inherit;
-  border-bottom-left-radius: inherit;
   display: flex;
   justify-content: space-between;
   padding: 0;
   margin: 0;
-  border-top: 1px solid lightgrey;
   background-color: #ececec;
+  border-top: 1px solid lightgrey;
+  border-bottom-right-radius: inherit;
+  border-bottom-left-radius: inherit;
 }
 
 .stats li {

@@ -1,17 +1,16 @@
 import PropTypes from 'prop-types';
 import getRandomColor from './getRandomColor';
 import s from './Statistics.module.css';
-// import getRandomColor from './getRandomColor';
 
-export default function Statistics({ data }) {
+export default function Statistics({ data, title }) {
   return (
     <section className={s.statistics}>
-      <h2 className={s.title}>UPLOAD STATS</h2>
+      {title && <h2 className={s.title}>{title.toUpperCase()}</h2>}
 
       <ul className={s.statList}>
-        {data.map(({ key, label, percentage }) => (
+        {data.map(({ id, label, percentage }) => (
           <li
-            key={key}
+            key={id}
             style={{ backgroundColor: getRandomColor() }}
             className={s.item}
           >
@@ -32,4 +31,5 @@ Statistics.propTypes = {
       percentage: PropTypes.number,
     }),
   ).isRequired,
+  title: PropTypes.string,
 };

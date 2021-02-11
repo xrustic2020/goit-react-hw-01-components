@@ -12,7 +12,6 @@ import transactions from './transactions.json';
 export default function App() {
   return (
     <Section>
-      <TransactionHistory items={transactions} />
       <Profile
         name={user.name}
         tag={user.tag}
@@ -22,6 +21,7 @@ export default function App() {
       />
       <Statistics title="Upload stats" data={statisticsData} />
       <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />
     </Section>
   );
 }

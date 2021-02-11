@@ -1,7 +1,13 @@
 import PropTypes from 'prop-types';
 import s from './FriendListItem.module.css';
+import defaultImage from './default.png';
 
-export default function FriendListItem({ avatar, name, isOnline, id }) {
+export default function FriendListItem({
+  avatar = defaultImage,
+  name,
+  isOnline,
+  id,
+}) {
   return (
     <li className={s.item} key={id}>
       <span
